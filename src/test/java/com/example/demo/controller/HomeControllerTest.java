@@ -8,11 +8,11 @@ import org.mockito.MockitoAnnotations;
 
 class HomeControllerTest {
 
-    HomeController homeController = new HomeController();
+  HomeController homeController = new HomeController();
 
-    @Test
-    void testHome() {
-        String result = homeController.home();
-        Assertions.assertEquals("home", result);
-    }
+  @Test
+  void testHome() {
+    String result = homeController.home();
+    Assertions.assertEquals("home", result);
+  }
 }
