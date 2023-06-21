@@ -75,6 +75,7 @@
     <modules>
         <module>demoapp</module>
         <module>eurekaserver</module>
+        <module>feign</module>
     </modules>
 
 </project>
