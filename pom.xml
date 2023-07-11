@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.0</version>
+        <version>2.7.7</version>
         <relativePath/>
     </parent>
 
@@ -19,9 +19,8 @@
     <packaging>pom</packaging>
 
     <properties>
-        <java.version>20</java.version>
-        <spring-cloud.version>2022.0.3</spring-cloud.version>
-        <spring-cloud-starter.version>2022.0.3</spring-cloud-starter.version>
+        <java.version>17</java.version>
+        <spring-cloud.version>2021.0.7</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -50,14 +49,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.cloud</groupId>-->
-<!--                <artifactId>spring-cloud-starter</artifactId>-->
-<!--                <version>${spring-cloud-starter.version}</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
 
         </dependencies>
 

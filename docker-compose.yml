@@ -1,0 +1,36 @@
+version: "3"
+services:
+  local-eureka:
+    build: ./eurekaserver
+    networks:
+      - mynet
+    image: local-eureka
+    ports:
+      - 8761:8761
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://local-eureka:8761/eureka
+  local-feign:
+    build: ./feign
+    networks:
+      - mynet
+    depends_on:
+      - local-eureka
+    image: local-feign
+    ports:
+      - 8080:8080
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://local-eureka:8761/eureka
+  local-demo:
+    build: ./demoapp
+    networks:
+      - mynet
+    image: local-demo
+    depends_on:
+      - local-eureka
+    ports:
+      - 8081:8081
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://local-eureka:8761/eureka
+networks:
+  mynet:
+    driver: bridge

@@ -1,9 +1,9 @@
-package com.example.feign;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class FeignApplicationTests {
-
-}
+//package com.example.feign;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class FeignApplicationTests {
+//
+//}
