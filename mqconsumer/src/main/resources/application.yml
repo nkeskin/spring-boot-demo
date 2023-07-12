@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8093
 
 management:
   info:
@@ -11,10 +11,16 @@ management:
         include: "*"
 
 spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
   application:
-    name: feign
+    name: mqconsumer
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
+mqconsumer-properties:
+  queue: test-queue

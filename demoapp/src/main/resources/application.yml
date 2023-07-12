@@ -1,7 +1,10 @@
 server:
-  port: 8081
+  port: 8091
 
 management:
+  info:
+    env:
+      enabled: true
   endpoints:
     web:
       exposure:
