@@ -1,0 +1,29 @@
+server:
+  port: 8092
+
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+  application:
+    name: mqproducer
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+mqproducer-properties:
+  exchange: test-exchange
+  queue: test-queue
+  routing-key: test-key
+  durable : false
