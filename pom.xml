@@ -63,6 +63,7 @@
         <module>feign</module>
         <module>mqproducer</module>
         <module>mqconsumer</module>
+        <module>gateway</module>
     </modules>
 
 </project>

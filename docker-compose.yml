@@ -56,6 +56,17 @@ services:
     environment:
       SPRING_RABBITMQ_HOST: rabbitmq
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://local-eureka:8761/eureka
+  local-gateway:
+    build: ./gateway
+    networks:
+      - mynet
+    image: local-gateway
+    depends_on:
+      - local-eureka
+    ports:
+      - "8094:8094"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://local-eureka:8761/eureka
 
 networks:
   mynet:
